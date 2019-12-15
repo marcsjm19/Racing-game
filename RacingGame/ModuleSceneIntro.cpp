@@ -112,72 +112,32 @@ bool ModuleSceneIntro::Start()
 	App->physics->AddBody(wall12, 100000);
 	wall12.wire = true;
 	wall12.color.Set(1.0f, 1.0f, 1.0f);
-	wall12.axis = true;
+	wall12.axis = true;	
 
-	////WALL13
-	Cube wall13(65, 30.5, 2);
-	wall13.SetPos(-105, 1, 110);
+	//WALL 13
+	Cube wall13(2, 30.5, 160);
+	wall13.SetPos(-105, 1, 60);
 	App->physics->AddBody(wall13, 100000);
 	wall13.wire = true;
 	wall13.color.Set(1.0f, 1.0f, 1.0f);
 	wall13.axis = true;
 
+
 	//WALL14
-	Cube wall14(2, 30.5, 100);
-	wall14.SetPos(-140, 1, 160);
+	Cube wall14(120, 30.5, 2);
+	wall14.SetPos(-48, 1, -20);
 	App->physics->AddBody(wall14, 100000);
 	wall14.wire = true;
 	wall14.color.Set(1.0f, 1.0f, 1.0f);
 	wall14.axis = true;
 
-	//WALL15
-	Cube wall15(70, 30.5, 2);
-	wall15.SetPos(-105, 1, 210);
-	App->physics->AddBody(wall15, 100000);
-	wall15.wire = true;
-	wall15.color.Set(1.0f, 1.0f, 1.0f);
-	wall15.axis = true;
 
-	//WALL16
-	Cube wall16(2, 30.5, 40);
-	wall16.SetPos(-105, 1, 160);
-	App->physics->AddBody(wall16, 100000);
-	wall16.wire = true;
-	wall16.color.Set(1.0f, 1.0f, 1.0f);
-	wall16.axis = true;
+	////OBSTACLE1
+	Cube Obstacle1(30, 2, 5);
+	Obstacle1.SetPos(-90, 0, 90);
+	Obstacle1.SetRotation(20, vec3(1, 0, 0));
+	App->physics->AddBody(Obstacle1, 0);
 
-	//WALL17
-	Cube wall17(2, 30.5, 70);
-	wall17.SetPos(-70, 1, 175);
-	App->physics->AddBody(wall17, 100000);
-	wall17.wire = true;
-	wall17.color.Set(1.0f, 1.0f, 1.0f);
-	wall17.axis = true;
-
-
-
-	//WALL 18
-	Cube wall18(2, 30.5, 130);
-	wall18.SetPos(-105, 1, 45);
-	App->physics->AddBody(wall18, 100000);
-	wall18.wire = true;
-	wall18.color.Set(1.0f, 1.0f, 1.0f);
-	wall18.axis = true;
-
-
-	//WALL19
-	Cube wall19(115, 30.5, 2);
-	wall19.SetPos(-48, 1, -20);
-	App->physics->AddBody(wall19, 100000);
-	wall19.wire = true;
-	wall19.color.Set(1.0f, 1.0f, 1.0f);
-	wall19.axis = true;
-
-	//WALL20
-	Cube wall20(3, 30.5, 28);
-	wall20.SetPos(-10, 1, -5);
-	App->physics->AddBody(wall20, 100000);
-	wall20.color.Set(1.0f, 1.0f, 1.0f);
 
 	return ret;
 }
@@ -248,7 +208,7 @@ update_status ModuleSceneIntro::Update(float dt)
 	//WALL9
 	Cube wall9(2, 30.5, 100);
 	wall9.SetPos(-40, 15, 90);
-	wall9.color = Green;
+	wall9.color = Blue;
 	wall9.Render();
 
 	//WALL10
@@ -266,57 +226,33 @@ update_status ModuleSceneIntro::Update(float dt)
 	//WALL12
 	Cube wall12(65, 30.5, 2);
 	wall12.SetPos(-72, 15, 138);
-	wall12.color = Green;
+	wall12.color = Blue;
 	wall12.Render();
 
 	//WALL13
-	Cube wall13(65, 30.5, 2);
-	wall13.SetPos(-105, 15, 111);
-	wall13.color = Green;
+	Cube wall13(2, 30.5, 160);
+	wall13.SetPos(-108.5, 15, 60);
+	wall13.color = Blue;
 	wall13.Render();
 
-	//WALL14
-	Cube wall14(2, 30.5, 100);
-	wall14.SetPos(-140.5, 15, 160);
+	////WALL14
+	Cube wall14(120, 30.5, 2);
+	wall14.SetPos(-48, 15, -20);
 	wall14.color = Blue;
 	wall14.Render();
 
-	//WALL15
-	Cube wall15(70, 30.5, 2);
-	wall15.SetPos(-105, 15, 210);
-	wall15.color = Blue;
-	wall15.Render();
+	//FINISH LINE
+	Cube finishline(1, 1, 28);
+	finishline.SetPos(-10, 5, -5);
+	finishline.color = Red;
+	finishline.Render();
 
-	//WALL16
-	Cube wall16(2, 30.5, 40);
-	wall16.SetPos(-105, 15, 160);
-	wall16.color = Blue;
-	wall16.Render();
-
-	//WALL17
-	Cube wall17(2, 30.5, 70);
-	wall17.SetPos(-68.5, 15, 175);
-	wall17.color = Blue;
-	wall17.Render();
-
-
-	//WALL 18
-	Cube wall18(2, 30.5, 130);
-	wall18.SetPos(-105.5, 15, 45);
-	wall18.color = Blue;
-	wall18.Render();
-
-	////WALL19
-	Cube wall19(115, 30.5, 2);
-	wall19.SetPos(-48, 15, -20);
-	wall19.color = Blue;
-	wall19.Render();
-
-	//WALL20
-	Cube wall20(3, 30.5, 28);
-	wall20.SetPos(-10, 15, -5);
-	wall20.color = Red;
-	wall20.Render();
+	////OBSTACLE1
+	Cube Obstacle1(30, 2, 5);
+	Obstacle1.SetPos(-90, 0, 90);
+	Obstacle1.SetRotation(20, vec3(1, 0, 0));
+	Obstacle1.color = Pink;
+	Obstacle1.Render();
 
 	
 
