@@ -135,8 +135,20 @@ bool ModuleSceneIntro::Start()
 	////OBSTACLE1
 	Cube Obstacle1(30, 2, 5);
 	Obstacle1.SetPos(-90, 0, 90);
-	Obstacle1.SetRotation(20, vec3(1, 0, 0));
+	Obstacle1.SetRotation(20, vec3(-1, 0, 0));
 	App->physics->AddBody(Obstacle1, 0);
+
+	////OBSTACLE2
+	Cube Obstacle2(30, 2, 5);
+	Obstacle2.SetPos(-90, 0, 60);
+	Obstacle2.SetRotation(20, vec3(-1, 0, 0));
+	App->physics->AddBody(Obstacle2, 0);
+
+	////OBSTACLE3
+	Cube Obstacle3(30, 2, 5);
+	Obstacle3.SetPos(-90, 0, 30);
+	Obstacle3.SetRotation(20, vec3(-1, 0, 0));
+	App->physics->AddBody(Obstacle3, 0);
 
 
 	return ret;
@@ -250,9 +262,23 @@ update_status ModuleSceneIntro::Update(float dt)
 	////OBSTACLE1
 	Cube Obstacle1(30, 2, 5);
 	Obstacle1.SetPos(-90, 0, 90);
-	Obstacle1.SetRotation(20, vec3(1, 0, 0));
+	Obstacle1.SetRotation(20, vec3(-1, 0, 0));
 	Obstacle1.color = Pink;
 	Obstacle1.Render();
+
+	////OBSTACLE2
+	Cube Obstacle2(30, 2, 5);
+	Obstacle2.SetPos(-90, 0, 60);
+	Obstacle2.SetRotation(20, vec3(-1, 0, 0));
+	Obstacle2.color = Pink;
+	Obstacle2.Render();
+
+	////OBSTACLE3
+	Cube Obstacle3(30, 2, 5);
+	Obstacle3.SetPos(-90, 0, 30);
+	Obstacle3.SetRotation(20, vec3(-1, 0, 0));
+	Obstacle3.color = Pink;
+	Obstacle3.Render();
 
 	
 
